@@ -18,10 +18,14 @@
       <div class="container">
         <div class="header clearfix">
           <h3 class="text-muted">My Dashboard</h3>
+          <!-- <p *ngFor="let announcement of announcements">{{announcement.details}}</p> -->
         </div>
 
         <div class="jumbotron">
           <h1 class="display-6">Jumbotron News</h1>
+          <ul *ngFor="let announcement of announcements">
+            <p> {{announcement.details}} </p>
+          </ul>
 
         </div>
 
