@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 
+import { DndModule } from 'ng2-dnd-master';
+
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -19,16 +21,20 @@ import { BenefitsComponent } from './benefits/benefits.component';
 import { StaffingComponent } from './staffing/staffing.component';
 import { EthicalConductComponent } from './ethical-conduct/ethical-conduct.component';
 import { ToolsAndServicesComponent } from './tools-and-services/tools-and-services.component';
+import { SimpleSortableCopyComponent } from './simple-sortable-copy/simple-sortable-copy.component';
+ // import { DragulaModule} from '../../node_modules/ng2-dragula/ng2-dragula';
+// import { DragulaService } from '../../node_modules/ng2-dragula/components/dragula.provider';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full'  },
+  { path: '', redirectTo: 'Home', pathMatch: 'full'  },
   { path: 'Home', component: DashboardComponent },
   { path: 'Career', component: CareerAndDevelopmentComponent },
   { path: 'Pay', component: PayComponent },
   { path: 'Benefits', component: BenefitsComponent },
   { path: 'Staffing', component: StaffingComponent },
   { path: 'EthicalConduct', component: EthicalConductComponent },
-  { path: 'ToolsAndServices', component: ToolsAndServicesComponent }
+  { path: 'ToolsAndServices', component: ToolsAndServicesComponent },
+  { path: 'SimpleSortableCopy', component: SimpleSortableCopyComponent }
 ];
 
 @NgModule({
@@ -42,7 +48,8 @@ const routes: Routes = [
     BenefitsComponent,
     StaffingComponent,
     EthicalConductComponent,
-    ToolsAndServicesComponent
+    ToolsAndServicesComponent,
+    SimpleSortableCopyComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +57,8 @@ const routes: Routes = [
     HttpModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(routes),
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    DndModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
