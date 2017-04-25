@@ -13,31 +13,13 @@ export class DashboardComponent implements OnInit {
   @Input()
    public alerts: Array<IAlert> = [];
 
+   public recentMessageAlert: Array<IAlert> = [];
 
   private backup: Array<IAlert>;
 
    announcements: Announcement [];
 
    constructor(private announcementsService: AnnouncementsService) {
-
-
-    //  this.alerts.push({
-    //   id: 1,
-    //   type: 'success',
-    //   message: 'This is an success alert',
-    // }, {
-    //   id: 2,
-    //   type: 'info',
-    //   message: 'This is an info alert',
-    // }, {
-    //   id: 3,
-    //   type: 'warning',
-    //   message: 'This is a warning alert',
-    // }, {
-    //   id: 4,
-    //   type: 'danger',
-    //   message: 'This is a danger alert',
-    // });
 
 }
 
@@ -70,11 +52,22 @@ export class DashboardComponent implements OnInit {
      }, 0 );
 
 
+     this.recentMessageAlert.push({
+       id: 1,
+       type: 'warning',
+       message: 'You have new messages!',
+     });
+
   }
 
   public closeAlert(alert: IAlert) {
     const index: number = this.alerts.indexOf(alert);
     this.alerts.splice(index, 1);
+  }
+
+  public closeRecentMessageAlert(alert: IAlert) {
+    const index: number = this.recentMessageAlert.indexOf(alert);
+    this.recentMessageAlert.splice(index, 1);
   }
 
   public reset() {

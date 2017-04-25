@@ -22,18 +22,43 @@
           <h3 class="text-muted">My Dashboard</h3>
           <!-- <p *ngFor="let announcement of announcements">{{announcement.details}}</p> -->
         </div>
+
+
+
+        <div id="accordion" role="tablist" aria-multiselectable="true">
+
+      <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <h5>Messages</h5>
+      </a>
+      <p *ngFor="let alert of recentMessageAlert">
+        <ngb-alert [type]="alert.type" (close)="closeRecentMessageAlert(alert)">{{ alert.message }}</ngb-alert>
+      </p>
+
+      <!-- <ngb-alert [type]="info" (close)="closeRecentMessageAlert(recentMessageAlert[1])"> {{ recentMessageAlert[1].message }}  </ngb-alert> -->
+      </h5>
+
+      </div>
+
+      <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-block">
         <p *ngFor="let alert of alerts">
           <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
         </p>
-      
+      </div>
+      </div>
+    </div>
+
+
 <!-- <ngb-alert [type]="getAlert(1).type" (close)="closeAlert(getAlert(1))">HEY!</ngb-alert> -->
         <div class="jumbotron">
           <h1 class="display-6">Jumbotron News</h1>
 
-          <ul *ngFor="let announcement of announcements">
+          <!-- <ul *ngFor="let announcement of announcements">
 
             <p> {{announcement.details}} </p>
-          </ul>
+          </ul> -->
 
         </div>
 
