@@ -22,10 +22,16 @@
           <h3 class="text-muted">My Dashboard</h3>
           <!-- <p *ngFor="let announcement of announcements">{{announcement.details}}</p> -->
         </div>
-
+        <p *ngFor="let alert of alerts">
+          <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+        </p>
+      
+<!-- <ngb-alert [type]="getAlert(1).type" (close)="closeAlert(getAlert(1))">HEY!</ngb-alert> -->
         <div class="jumbotron">
           <h1 class="display-6">Jumbotron News</h1>
+
           <ul *ngFor="let announcement of announcements">
+
             <p> {{announcement.details}} </p>
           </ul>
 
