@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DndModule } from 'ng2-dnd-master';
@@ -10,6 +10,8 @@ import { DndModule } from 'ng2-dnd-master';
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+
+
 
 import { AppComponent } from './app.component';
 import { TabsetBasicComponent } from './tabset-basic/tabset-basic.component';
@@ -57,6 +59,8 @@ const routes: Routes = [
     HttpModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(routes),
+    ReactiveFormsModule,
+    NgbAccordionModule.forRoot(),
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     DndModule.forRoot()
   ],

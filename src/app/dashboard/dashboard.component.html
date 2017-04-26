@@ -12,10 +12,51 @@
 
 
 
+
 <body>
+<div class="container-fluid" >
   <div class="row">
-    <div class="col-md-2">.col-md-2</div>
-    <div class="col-md-8">.col-md-8
+     <!-- <div class="col-md-2">.col-md-2 -->
+
+    <nav class=" col-sm-2 hidden-xs-down hidden-md-down hidden-sm-down bg-faded sidebar">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <div class="page-header">
+                <h5>Quick Links</h5>
+              </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Report a Concern</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Enter My Time</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Protect Lilly</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Calendar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Lilly Classifieds</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Lilly University</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Health Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Lilly Discounts</a>
+                </li>
+              </ul>
+
+
+            </nav>
+
+    <!-- </div>  -->
+    <!-- col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3 -->
+    <div class="col-lg-8">
 
       <div class="container">
         <div class="header clearfix">
@@ -25,35 +66,14 @@
 
 
 
-        <div id="accordion" role="tablist" aria-multiselectable="true">
 
-      <div class="card-header" role="tab" id="headingOne">
-      <h5 class="mb-0">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <h5>Messages</h5>
-      </a>
-      <p *ngFor="let alert of recentMessageAlert">
-        <ngb-alert [type]="alert.type" (close)="closeRecentMessageAlert(alert)">{{ alert.message }}</ngb-alert>
-      </p>
 
-      <!-- <ngb-alert [type]="info" (close)="closeRecentMessageAlert(recentMessageAlert[1])"> {{ recentMessageAlert[1].message }}  </ngb-alert> -->
-      </h5>
 
-      </div>
-
-      <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-      <div class="card-block">
-        <p *ngFor="let alert of alerts">
-          <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
-        </p>
-      </div>
-      </div>
-    </div>
 
 
 <!-- <ngb-alert [type]="getAlert(1).type" (close)="closeAlert(getAlert(1))">HEY!</ngb-alert> -->
         <div class="jumbotron">
-          <h1 class="display-6">Jumbotron News</h1>
+          <h1 class="display-6">Announcements</h1>
 
           <!-- <ul *ngFor="let announcement of announcements">
 
@@ -62,19 +82,73 @@
 
         </div>
 
+        <div id="accordion1" role="tablist" aria-multiselectable="true">
+
+        <div class="card-header" role="tab" id="headingOne">
+        <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+
+        <h5>Messages</h5>
+        </a>
+        <p *ngFor="let alert of recentMessageAlert">
+        <ngb-alert [type]="alert.type" (close)="closeRecentMessageAlert(alert)">{{ alert.message }}</ngb-alert>
+        </p>
+
+        <!-- <ngb-alert [type]="info" (close)="closeRecentMessageAlert(recentMessageAlert[1])"> {{ recentMessageAlert[1].message }}  </ngb-alert> -->
+        </h5>
+
+        </div>
+
+        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+        <div class="card-block">
+        <p *ngFor="let alert of alerts">
+          <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+        </p>
+        </div>
+        </div>
+        </div>
+
         <div id="accordion" role="tablist" aria-multiselectable="true">
 
-  <div class="card-header" role="tab" id="headingOne">
+  <div class="card-header" role="tab" id="subheadingOne">
     <h5 class="mb-0">
-      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <h5>Subheading</h5>
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapseSubheading" aria-expanded="true" aria-controls="collapseSubheading">
+        <h5>Career and Development</h5>
       </a>
     </h5>
   </div>
 
-  <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+  <div id="collapseSubheading" class="collapse show" role="tabpanel" aria-labelledby="subheadingOne">
+
+
     <div class="card-block">
-      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+              <div class="row marketing">
+
+<div class="col-md-4 hidden-xs-down hidden-sm-down bg-faded">
+  <img src="../assets/images/careerdevelopment.png" width="200px" height="125px" alt="Card image cap">
+</div>
+
+              <!-- <div id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="card"> -->
+                <div class="col-md-4">
+
+                <a class="nav-link" href="#">  <h6>myPM</h6></a>
+
+                <a class="nav-link" href="#">  <h6>Position Postings</h6></a>
+
+                <a class="nav-link" href="#">  <h6>Learning Plan</h6></a>
+
+                </div>
+
+
+                <div class="col-md-4">
+                <a class="nav-link" href="#">  <h6>Learning Request</h6></a>
+
+                <a class="nav-link" href="#">  <h6>Inspire</h6></a>
+
+                <a class="nav-link" href="#">  <h6>My Career</h6></a>
+                </div>
+              </div>
     </div>
   </div>
 
@@ -82,13 +156,22 @@
   <div class="card-header" role="tab" id="headingTwo">
     <h5 class="mb-0">
       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Collapsible Group Item #2
+        Pay and Benefits
       </a>
     </h5>
   </div>
   <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+
+
     <div class="card-block">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="row">
+      <div class="col-md-4 hidden-xs-down hidden-sm-down">
+        <img src="../assets/images/payandbenefits.png" width="200px" height="125px" alt="Card image cap">
+      </div>
+
+    <div class="col-md-8">  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </div>
+  </div>
     </div>
   </div>
 
@@ -96,26 +179,40 @@
   <div class="card-header" role="tab" id="headingThree">
     <h5 class="mb-0">
       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Collapsible Group Item #3
+        Personal Information
       </a>
     </h5>
   </div>
+
+
+
   <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
     <div class="card-block">
+        <div class="row">
+        <div class="col-md-4 hidden-xs-down hidden-sm-down">
+          <img src="../assets/images/mypersonalinformation.png" width="200px" height="125px" alt="Card image cap">
+        </div>
+
+      <div class="col-md-8">
       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
     </div>
   </div>
 </div>
+</div>
 
-
-        <div class="row marketing">
+<div class="card-block">
+</div>
+        <!-- <div class="row marketing"> -->
 
         <!-- <div id="accordion" role="tablist" aria-multiselectable="true">
           <div class="card"> -->
-          <div class="col-lg-6">
+          <!-- <div class="col-lg-6">
 
             <h5>Subheading</h5>
             <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+            <h5>Subheading</h5>
+            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 
             <h5>Subheading</h5>
             <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
@@ -132,7 +229,7 @@
             <h5>Subheading</h5>
             <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
           </div>
-        </div>
+        </div> -->
 
         <!-- </div>
         </div> -->
@@ -143,11 +240,17 @@
 
       </div> <!-- /container -->
 
+</div>
+</div>
+<div class="col-sm-2 hidden-xs-down hidden-md-down bg-faded sidebar"></div>
 
 
-    </div>
-    <div class="col-md-2">.col-md-2</div>
+
+    <!-- col-md-2 hidden-xs-down hidden-md-down -->
+<!-- col-sm-2 hidden-xs-down hidden-md-down bg-faded sidebar -->
+
   </div>
+</div>
 
 
   <!-- Bootstrap core JavaScript
