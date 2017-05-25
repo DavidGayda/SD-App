@@ -12,13 +12,20 @@
 
 
 
-
 <body>
+
+
+
+
+
 <div class="container-fluid" >
   <div class="row">
      <!-- <div class="col-md-2">.col-md-2 -->
 
-    <nav class=" col-sm-2 hidden-xs-down hidden-md-down hidden-sm-down bg-faded sidebar">
+    <div class=" col-lg-2 col-md-3 col-sm-3 hidden-xs-down bg-faded sidebar" style="background-color:inherit;">
+
+
+
               <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
                   <div class="page-header">
@@ -52,35 +59,62 @@
               </ul>
 
 
-            </nav>
+            </div>
 
     <!-- </div>  -->
     <!-- col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3 -->
-    <div class="col-lg-8">
+    <div class="col-lg-9 col-md-9 col-sm-9">
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">My Recent Messages</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="card-block">
+              <p *ngFor="let alert of alerts">
+                <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+              </p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="container">
-        <div class="header clearfix">
-          <h3 class="text-muted">My Dashboard</h3>
+        <p *ngFor="let alert of recentMessageAlert">
+        <ngb-alert [type]="alert.type" (close)="closeRecentMessageAlert(alert)"><a href="#" class="alert-link" data-toggle="modal"  data-target="#exampleModalLong">{{ alert.message }}</a></ngb-alert>
+        </p>
+        <!-- <div class="header clearfix">
+          <h3 class="text-muted">My Dashboard</h3> -->
           <!-- <p *ngFor="let announcement of announcements">{{announcement.details}}</p> -->
-        </div>
+        <!-- </div> -->
 
-
-
+<app-homepage-carousel class="hidden-sm-down" ></app-homepage-carousel>
 
 
 
 
 
 <!-- <ngb-alert [type]="getAlert(1).type" (close)="closeAlert(getAlert(1))">HEY!</ngb-alert> -->
-        <div class="jumbotron">
-          <h1 class="display-6">Announcements</h1>
+        <!-- <div class="jumbotron">
+          <h1 class="display-6">Announcements</h1> -->
 
           <!-- <ul *ngFor="let announcement of announcements">
 
             <p> {{announcement.details}} </p>
           </ul> -->
-
-        </div>
+<!--
+        </div> -->
 
         <div id="accordion1" role="tablist" aria-multiselectable="true">
 
@@ -90,9 +124,9 @@
 
         <h5>Messages</h5>
         </a>
-        <p *ngFor="let alert of recentMessageAlert">
+        <!-- <p *ngFor="let alert of recentMessageAlert">
         <ngb-alert [type]="alert.type" (close)="closeRecentMessageAlert(alert)">{{ alert.message }}</ngb-alert>
-        </p>
+        </p> -->
 
         <!-- <ngb-alert [type]="info" (close)="closeRecentMessageAlert(recentMessageAlert[1])"> {{ recentMessageAlert[1].message }}  </ngb-alert> -->
         </h5>
@@ -100,11 +134,11 @@
         </div>
 
         <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-        <div class="card-block">
+        <!-- <div class="card-block">
         <p *ngFor="let alert of alerts">
           <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
         </p>
-        </div>
+        </div> -->
         </div>
         </div>
 
@@ -242,7 +276,7 @@
 
 </div>
 </div>
-<div class="col-sm-2 hidden-xs-down hidden-md-down bg-faded sidebar"></div>
+<!-- <div class="col-sm-2 col-lg-2 hidden-xs-down hidden-md-down bg-faded sidebar"></div> -->
 
 
 

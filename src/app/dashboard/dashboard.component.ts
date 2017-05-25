@@ -2,6 +2,7 @@ import { Input, Component, OnInit } from '@angular/core';
 import { NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 import { Announcement } from '../announcement';
 import { AnnouncementsService } from '../announcements.service';
+import { HomepageCarouselComponent } from '../homepage-carousel/homepage-carousel.component';
 
 @Component({
   selector: 'app-dashboard',

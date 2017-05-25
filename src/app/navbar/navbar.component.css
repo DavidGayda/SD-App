@@ -1,0 +1,14 @@
+.nav-item a:hover {
+  color: #000000;
+    /*color: #D52B1E;*/
+    background-color: rgba(213, 43, 30, .25);
+    /*border-bottom: 2px solid #D52B1E;*/
+    border-radius: 10px;
+}
+
+
+/*.navbar-nav > .active > a {
+  color: #D52B1E;
+
+  text-decoration: underline;
+}*/
