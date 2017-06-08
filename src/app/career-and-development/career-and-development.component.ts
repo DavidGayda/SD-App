@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 // import {NgbPanelChangeEvent} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -21,9 +22,27 @@ export class CareerAndDevelopmentComponent implements OnInit {
   //      $event.preventDefault();
   //    }
   //  };
-  constructor() { }
+  images = ["../assets/images/lilly-moments/collaboration_REVeli_002.Smaller.jpg", "../assets/images/LillyU-RedandBlack.png"];
 
-  ngOnInit() {
+   //   announcements: Announcement [];
+   //images = [];
+      // {id : 2,
+      //   imageUrl: "../assets/images/lilly-moments/DaveRicks_0162_LowRes.jpg"},
+      // { id : 3,
+      //     imageUrl: "../assets/images/lilly-moments/DaveRicks_0162_LowRes.jpg"}
+      //   ];
+
+    constructor() {
+
+
+    }
+
+    ngOnInit() {
+    }
+
+
   }
-
-}
+  export interface Image {
+    id: number;
+    url: string;
+  }

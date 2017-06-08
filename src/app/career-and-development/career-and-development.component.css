@@ -1,0 +1,90 @@
+
+/*.featurette-image:hover > .overlay {
+    position: absolute;
+    top: 0;
+    width:100%;
+    height:100%;
+    left: 0;
+    background-color:#000;
+    opacity:0.5;
+    z-index: 100;
+    display: block;
+}*/
+
+
+/*@import "compass/css3";*/
+
+/*.featurette-image:hover {
+  filter:url('#drop-shadow');
+}*/
+
+/*Styles*/
+
+
+
+
+#gallery a {
+
+
+	-webkit-box-shadow:  rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:  rgba(0, 0, 0, 0.5);
+	box-shadow:  rgba(0, 0, 0, 0.5);
+}
+
+/*Left and Right margins to images in the middle column*/
+/*This selects the 2nd, 5th and 8th elements*/
+
+
+#gallery a img {
+	-webkit-transition: all 0s;
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+/*Hover effects*/
+#gallery a img:hover {
+	-webkit-filter: none; /*Returns to default state*/
+}
+/*Default state for brightness has to be specified specifically*/
+#gallery a img.brightness:hover {
+	-webkit-filter: brightness(0);
+}
+
+
+
+/*Filter styles*/
+.saturate {-webkit-filter: saturate(3);}
+.grayscale {-webkit-filter: grayscale(100%);}
+.contrast {-webkit-filter: contrast(160%);}
+.brightness {-webkit-filter: brightness(0.25);}
+.blur {-webkit-filter: blur(3px);}
+.invert {-webkit-filter: invert(100%);}
+.sepia {-webkit-filter: sepia(100%);}
+.huerotate {-webkit-filter: hue-rotate(180deg);}
+.opacity {-webkit-filter: opacity(50%);}
+
+/*.effect8:before
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}*/

@@ -22,7 +22,7 @@
   <div class="row">
      <!-- <div class="col-md-2">.col-md-2 -->
 
-    <div class=" col-lg-2 col-md-3 col-sm-3 hidden-xs-down bg-faded sidebar" style="background-color:inherit;">
+    <!-- <div class=" col-lg-2 col-md-3 col-sm-3 hidden-xs-down bg-faded sidebar rounded-100 " style="border-radius: 10px;" >
 
 
 
@@ -59,11 +59,14 @@
               </ul>
 
 
-            </div>
+            </div> -->
 
     <!-- </div>  -->
     <!-- col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3 -->
-    <div class="col-lg-9 col-md-9 col-sm-9">
+
+
+    <!-- col-lg-2 col-md-3 col-sm-3  -->
+    <div class="col-lg-12 col-md-12 col-sm-12">
 
       <!-- Modal -->
       <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -100,9 +103,53 @@
         <!-- </div> -->
 
 <app-homepage-carousel class="hidden-sm-down" ></app-homepage-carousel>
+  <!-- <hr class="featurette-divider" style="padding-top: 1vh;"> -->
+  <br/>
+<div class="card" >
+  <div class="card-header text-center">
+    <h6>Quick Links <span class="sr-only">(current)</span></h6>
+  </div>
+
+<nav class="navbar navbar-light justify-content-center navbar-toggleable-sm">
+<div class="justify-content-md-center " id="containerNavbarCenter">
 
 
 
+<ul class="navbar-nav">
+<li class=" dropdown btn ">
+  <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Protect Lilly</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown05">
+    <a class="dropdown-item" href="#">Report a Concern</a>
+  </div>
+</li>
+<li class=" dropdown btn ">
+  <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Calendar</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown05">
+    <a class="dropdown-item" href="#">Calendar</a>
+    <a class="dropdown-item" href="#">Enter My Time</a>
+  </div>
+</li>
+<li class="dropdown btn ">
+  <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Links</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown05">
+    <a class="dropdown-item" href="#">Lilly Classifieds</a>
+    <a class="dropdown-item" href="#">Lilly Discounts</a>
+    <a class="dropdown-item" href="#">Health Services</a>
+  </div>
+</li>
+  <li class="dropdown btn ">
+    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Suggested Links</a>
+    <div class="dropdown-menu" aria-labelledby="dropdown05">
+      <a class="dropdown-item" href="#">Cafeteria Menus</a>
+      <a class="dropdown-item" href="#">Pep IT Up</a>
+      <a class="dropdown-item" href="#">Giving Back</a>
+    </div>
+  </li>
+</ul>
+</div>
+
+</nav>
+</div>
 
 
 <!-- <ngb-alert [type]="getAlert(1).type" (close)="closeAlert(getAlert(1))">HEY!</ngb-alert> -->
@@ -115,34 +162,96 @@
           </ul> -->
 <!--
         </div> -->
+        <div class="container" id="featurette-holder">
+          <div id="gallery">
+              <hr class="featurette-divider">
 
-        <div id="accordion1" role="tablist" aria-multiselectable="true">
+        <div class="row featurette" style="padding: 5vh;" >
+          <div class="col-md-7">
+            <h2 class="featurette-heading">LillyPad</h2>
+            <p class="lead">An official blog of Eli Lilly and Company</p>
+          </div>
+          <div class="col-md-5">
+            <div class="featurette-image">
+              <a href="#">
+
+              <img class="img-fluid mx-auto card-header contrast" src="../assets/images/LillyPad.png" alt="Generic placeholder image">
+              </a>
+              <!-- <div class="overlay"></div> -->
+          </div>
+        </div>
+        </div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette" style="padding: 5vh;" >
+  <div class="col-md-7  push-md-5">
+    <h2 class="featurette-heading">MyPassword</h2>
+    <p class="lead">Reset or Unlock your Account, Change Password, or Update your challenge Questions and Answers</p>
+  </div>
+  <div class="col-md-5 pull-md-7">
+    <div class="featurette-image">
+      <a href="#">
+
+      <img class="img-fluid mx-auto card-header contrast" src="../assets/images/MyPassword.PNG" alt="Generic placeholder image">
+      </a>
+      <!-- <div class="overlay"></div> -->
+  </div>
+</div>
+</div>
+
+
+       <hr class="featurette-divider">
+
+       <div class="row featurette" style="padding: 5vh;" >
+         <div class="col-md-7">
+           <h2 class="featurette-heading">Service Now</h2>
+           <p class="lead">Integrated technology services that power innovation</p>
+         </div>
+         <div class="col-md-5">
+           <div class="featurette-image">
+             <a href="#">
+
+             <img class="img-fluid mx-auto card-header contrast" src="../assets/images/ServiceNow.PNG" alt="Generic placeholder image">
+             </a>
+             <!-- <div class="overlay"></div> -->
+         </div>
+       </div>
+       </div>
+
+
+              <hr class="featurette-divider">
+
+</div>
+</div> <!-- Gallery End -->
+
+        <!-- <div id="accordion1" role="tablist" aria-multiselectable="true">
 
         <div class="card-header" role="tab" id="headingOne">
         <h5 class="mb-0">
         <a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 
         <h5>Messages</h5>
-        </a>
+        </a> -->
         <!-- <p *ngFor="let alert of recentMessageAlert">
         <ngb-alert [type]="alert.type" (close)="closeRecentMessageAlert(alert)">{{ alert.message }}</ngb-alert>
         </p> -->
 
         <!-- <ngb-alert [type]="info" (close)="closeRecentMessageAlert(recentMessageAlert[1])"> {{ recentMessageAlert[1].message }}  </ngb-alert> -->
-        </h5>
+        <!-- </h5>
 
         </div>
 
-        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne"> -->
         <!-- <div class="card-block">
         <p *ngFor="let alert of alerts">
           <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
         </p>
         </div> -->
-        </div>
-        </div>
+        <!-- </div>
+        </div> -->
 
-        <div id="accordion" role="tablist" aria-multiselectable="true">
+        <!-- <div id="accordion" role="tablist" aria-multiselectable="true">
 
   <div class="card-header" role="tab" id="subheadingOne">
     <h5 class="mb-0">
@@ -162,8 +271,7 @@
   <img src="../assets/images/careerdevelopment.png" width="200px" height="125px" alt="Card image cap">
 </div>
 
-              <!-- <div id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="card"> -->
+
                 <div class="col-md-4">
 
                 <a class="nav-link" href="#">  <h6>myPM</h6></a>
@@ -236,43 +344,14 @@
 
 <div class="card-block">
 </div>
-        <!-- <div class="row marketing"> -->
-
-        <!-- <div id="accordion" role="tablist" aria-multiselectable="true">
-          <div class="card"> -->
-          <!-- <div class="col-lg-6">
-
-            <h5>Subheading</h5>
-            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-            <h5>Subheading</h5>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-
-            <h5>Subheading</h5>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-          </div>
-
-
-          <div class="col-lg-6">
-            <h5>Subheading</h5>
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-            <h5>Subheading</h5>
-            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-            <h5>Subheading</h5>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-          </div>
-        </div> -->
-
-        <!-- </div>
-        </div> -->
+  </div>  -->
+  <!-- /Accordian-->
 
         <footer class="footer">
           <p>&copy; Company 2017</p>
         </footer>
 
-      </div> <!-- /container -->
+
 
 </div>
 </div>

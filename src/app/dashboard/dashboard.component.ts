@@ -12,6 +12,7 @@ import { HomepageCarouselComponent } from '../homepage-carousel/homepage-carouse
 })
 export class DashboardComponent implements OnInit {
 
+
   // public beforeChange($event: NgbPanelChangeEvent) {
   //
   //    if ($event.panelId === 'preventchange-2') {
