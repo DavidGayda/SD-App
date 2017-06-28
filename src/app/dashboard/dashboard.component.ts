@@ -11,23 +11,39 @@ import { HomepageCarouselComponent } from '../homepage-carousel/homepage-carouse
   providers: [AnnouncementsService]
 })
 export class DashboardComponent implements OnInit {
-
-
-  // public beforeChange($event: NgbPanelChangeEvent) {
-  //
-  //    if ($event.panelId === 'preventchange-2') {
-  //      $event.preventDefault();
-  //    }
-  //
-  //    if ($event.panelId === 'preventchange-3' && $event.nextState === false) {
-  //      $event.preventDefault();
-  //    }
-  //  };
+  featurettes = [{
+    id: 1,
+    header: 'LillyPad',
+    body: 'An official blog of Eli Lilly and Company',
+    imageUrl: '../assets/images/LillyPad.png',
+    href: 'https://lillypad.lilly.com/',
+  },
+  {
+    id: 2,
+    header: 'Service Now',
+    body: 'Integrated technology services that power innovation',
+    imageUrl: '../assets/images/ServiceNow.PNG',
+    href: 'https://lilly.service-now.com/ess/main.do',
+  },
+  {
+    id: 3,
+    header: 'MyPassword',
+    body: 'Reset or Unlock your Account, Change Password, or Update your challenge Questions and Answers',
+    imageUrl: '../assets/images/MyPassword.PNG',
+    href: 'https://mypassword.lilly.com',
+  },
+  {
+  id: 4,
+  header: 'Lilly Classifieds',
+  body: 'With the new Lilly Classifieds, it’s easier than ever to place an ad and find what you’re looking for',
+  imageUrl: '../assets/images/LillyClassifieds.PNG',
+  href: 'http://classifieds.am.lilly.com/',
+  }];
 
   @Input()
    public alerts: Array<IAlert> = [];
 
-   public recentMessageAlert: Array<IAlert> = [];
+  public recentMessageAlert: Array<IAlert> = [];
 
   private backup: Array<IAlert>;
 
@@ -54,6 +70,11 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
      this.getAnnouncements();
+        this.recentMessageAlert.push({
+          id: 1,
+          type: 'warning',
+          message: 'You have new messages!',
+        });
 
      setTimeout( () => {
        for (let announcement of this.announcements) {
@@ -66,11 +87,6 @@ export class DashboardComponent implements OnInit {
      }, 100 );
 
 
-     this.recentMessageAlert.push({
-       id: 1,
-       type: 'warning',
-       message: 'You have new messages!',
-     });
 
   }
 

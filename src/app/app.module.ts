@@ -25,6 +25,13 @@ import { EthicalConductComponent } from './ethical-conduct/ethical-conduct.compo
 import { ToolsAndServicesComponent } from './tools-and-services/tools-and-services.component';
 import { SimpleSortableCopyComponent } from './simple-sortable-copy/simple-sortable-copy.component';
 import { HomepageCarouselComponent } from './homepage-carousel/homepage-carousel.component';
+import { QuickLinksComponentComponent } from './quick-links-component/quick-links-component.component';
+import { LearningPlanDashboardComponentComponent } from './learning-plan-dashboard-component/learning-plan-dashboard-component.component';
+import { MyMessagesModalComponentComponent } from './my-messages-modal-component/my-messages-modal-component.component';
+import { FeaturetteComponentComponent } from './featurette-component/featurette-component.component';
+import { NewsComponentComponent } from './news-component/news-component.component';
+import { LeftFeaturetteComponent } from './left-featurette/left-featurette.component';
+import { RightFeaturetteComponent } from './right-featurette/right-featurette.component';
  // import { DragulaModule} from '../../node_modules/ng2-dragula/ng2-dragula';
 // import { DragulaService } from '../../node_modules/ng2-dragula/components/dragula.provider';
 //
@@ -37,7 +44,8 @@ const routes: Routes = [
   { path: 'Staffing', component: StaffingComponent },
   { path: 'EthicalConduct', component: EthicalConductComponent },
   { path: 'ToolsAndServices', component: ToolsAndServicesComponent },
-  { path: 'SimpleSortableCopy', component: SimpleSortableCopyComponent }
+  { path: 'SimpleSortableCopy', component: SimpleSortableCopyComponent },
+  { path: 'News', component: NewsComponentComponent }
 ];
 
 @NgModule({
@@ -53,7 +61,14 @@ const routes: Routes = [
     EthicalConductComponent,
     ToolsAndServicesComponent,
     SimpleSortableCopyComponent,
-    HomepageCarouselComponent
+    HomepageCarouselComponent,
+    QuickLinksComponentComponent,
+    LearningPlanDashboardComponentComponent,
+    MyMessagesModalComponentComponent,
+    FeaturetteComponentComponent,
+    NewsComponentComponent,
+    LeftFeaturetteComponent,
+    RightFeaturetteComponent
   ],
   imports: [
     BrowserModule,

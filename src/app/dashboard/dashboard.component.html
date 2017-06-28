@@ -9,361 +9,61 @@
 
   <title>Narrow Jumbotron Template for Bootstrap</title>
 </head>
-
-
-
 <body>
+  <div class="container-fluid" >
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
 
+        <!-- Modal -->
+        <app-my-messages-modal-component></app-my-messages-modal-component>
 
-
-
-
-<div class="container-fluid" >
-  <div class="row">
-     <!-- <div class="col-md-2">.col-md-2 -->
-
-    <!-- <div class=" col-lg-2 col-md-3 col-sm-3 hidden-xs-down bg-faded sidebar rounded-100 " style="border-radius: 10px;" >
-
-
-
-              <ul class="nav nav-pills flex-column">
-                <li class="nav-item">
-                  <div class="page-header">
-                <h5>Quick Links</h5>
-              </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Report a Concern</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Enter My Time</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Protect Lilly</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Calendar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Lilly Classifieds</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Lilly University</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Health Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Lilly Discounts</a>
-                </li>
-              </ul>
-
-
-            </div> -->
-
-    <!-- </div>  -->
-    <!-- col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3 -->
-
-
-    <!-- col-lg-2 col-md-3 col-sm-3  -->
-    <div class="col-lg-12 col-md-12 col-sm-12">
-
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">My Recent Messages</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="card-block">
-              <p *ngFor="let alert of alerts">
-                <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
-              </p>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        <br/>
+        <div class="container">
+          <!-- *ngIf="teamMembers?.length > 0" -->
+          <div *ngIf="announcements?.length > 0">
+            <div *ngFor="let alert of recentMessageAlert">
+              <ngb-alert [type]="alert.type" (close)="closeRecentMessageAlert(alert)"><a href="#" class="alert-link" data-toggle="modal"  data-target="#exampleModalLong">{{ alert.message }}</a></ngb-alert>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <p *ngFor="let alert of recentMessageAlert">
-        <ngb-alert [type]="alert.type" (close)="closeRecentMessageAlert(alert)"><a href="#" class="alert-link" data-toggle="modal"  data-target="#exampleModalLong">{{ alert.message }}</a></ngb-alert>
-        </p>
-        <!-- <div class="header clearfix">
-          <h3 class="text-muted">My Dashboard</h3> -->
-          <!-- <p *ngFor="let announcement of announcements">{{announcement.details}}</p> -->
-        <!-- </div> -->
-
-<app-homepage-carousel class="hidden-sm-down" ></app-homepage-carousel>
-  <!-- <hr class="featurette-divider" style="padding-top: 1vh;"> -->
-  <br/>
-<div class="card" >
-  <div class="card-header text-center">
-    <h6>Quick Links <span class="sr-only">(current)</span></h6>
-  </div>
-
-<nav class="navbar navbar-light justify-content-center navbar-toggleable-sm">
-<div class="justify-content-md-center " id="containerNavbarCenter">
 
 
-
-<ul class="navbar-nav">
-<li class=" dropdown btn ">
-  <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Protect Lilly</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown05">
-    <a class="dropdown-item" href="#">Report a Concern</a>
-  </div>
-</li>
-<li class=" dropdown btn ">
-  <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Calendar</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown05">
-    <a class="dropdown-item" href="#">Calendar</a>
-    <a class="dropdown-item" href="#">Enter My Time</a>
-  </div>
-</li>
-<li class="dropdown btn ">
-  <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Links</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown05">
-    <a class="dropdown-item" href="#">Lilly Classifieds</a>
-    <a class="dropdown-item" href="#">Lilly Discounts</a>
-    <a class="dropdown-item" href="#">Health Services</a>
-  </div>
-</li>
-  <li class="dropdown btn ">
-    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Suggested Links</a>
-    <div class="dropdown-menu" aria-labelledby="dropdown05">
-      <a class="dropdown-item" href="#">Cafeteria Menus</a>
-      <a class="dropdown-item" href="#">Pep IT Up</a>
-      <a class="dropdown-item" href="#">Giving Back</a>
-    </div>
-  </li>
-</ul>
-</div>
-
-</nav>
-</div>
-
-
-<!-- <ngb-alert [type]="getAlert(1).type" (close)="closeAlert(getAlert(1))">HEY!</ngb-alert> -->
-        <!-- <div class="jumbotron">
-          <h1 class="display-6">Announcements</h1> -->
-
-          <!-- <ul *ngFor="let announcement of announcements">
-
-            <p> {{announcement.details}} </p>
-          </ul> -->
-<!--
-        </div> -->
-        <div class="container" id="featurette-holder">
-          <div id="gallery">
+          <app-homepage-carousel class="hidden-sm-down" ></app-homepage-carousel>
+          <br/>
+          <app-quick-links-component></app-quick-links-component>
+          <br/>
+          <app-learning-plan-dashboard-component></app-learning-plan-dashboard-component>
+          <app-featurette-component [featurettes]="featurettes"> </app-featurette-component>
+          <div class="container" id="featurette-holder">
+            <div id="gallery">
               <hr class="featurette-divider">
-
-        <div class="row featurette" style="padding: 5vh;" >
-          <div class="col-md-7">
-            <h2 class="featurette-heading">LillyPad</h2>
-            <p class="lead">An official blog of Eli Lilly and Company</p>
-          </div>
-          <div class="col-md-5">
-            <div class="featurette-image">
-              <a href="#">
-
-              <img class="img-fluid mx-auto card-header contrast" src="../assets/images/LillyPad.png" alt="Generic placeholder image">
-              </a>
-              <!-- <div class="overlay"></div> -->
-          </div>
-        </div>
-        </div>
-
-<hr class="featurette-divider">
-
-<div class="row featurette" style="padding: 5vh;" >
-  <div class="col-md-7  push-md-5">
-    <h2 class="featurette-heading">MyPassword</h2>
-    <p class="lead">Reset or Unlock your Account, Change Password, or Update your challenge Questions and Answers</p>
-  </div>
-  <div class="col-md-5 pull-md-7">
-    <div class="featurette-image">
-      <a href="#">
-
-      <img class="img-fluid mx-auto card-header contrast" src="../assets/images/MyPassword.PNG" alt="Generic placeholder image">
-      </a>
-      <!-- <div class="overlay"></div> -->
-  </div>
-</div>
-</div>
-
-
-       <hr class="featurette-divider">
-
-       <div class="row featurette" style="padding: 5vh;" >
-         <div class="col-md-7">
-           <h2 class="featurette-heading">Service Now</h2>
-           <p class="lead">Integrated technology services that power innovation</p>
-         </div>
-         <div class="col-md-5">
-           <div class="featurette-image">
-             <a href="#">
-
-             <img class="img-fluid mx-auto card-header contrast" src="../assets/images/ServiceNow.PNG" alt="Generic placeholder image">
-             </a>
-             <!-- <div class="overlay"></div> -->
-         </div>
-       </div>
-       </div>
-
-
-              <hr class="featurette-divider">
-
-</div>
-</div> <!-- Gallery End -->
-
-        <!-- <div id="accordion1" role="tablist" aria-multiselectable="true">
-
-        <div class="card-header" role="tab" id="headingOne">
-        <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-
-        <h5>Messages</h5>
-        </a> -->
-        <!-- <p *ngFor="let alert of recentMessageAlert">
-        <ngb-alert [type]="alert.type" (close)="closeRecentMessageAlert(alert)">{{ alert.message }}</ngb-alert>
-        </p> -->
-
-        <!-- <ngb-alert [type]="info" (close)="closeRecentMessageAlert(recentMessageAlert[1])"> {{ recentMessageAlert[1].message }}  </ngb-alert> -->
-        <!-- </h5>
-
-        </div>
-
-        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne"> -->
-        <!-- <div class="card-block">
-        <p *ngFor="let alert of alerts">
-          <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
-        </p>
-        </div> -->
-        <!-- </div>
-        </div> -->
-
-        <!-- <div id="accordion" role="tablist" aria-multiselectable="true">
-
-  <div class="card-header" role="tab" id="subheadingOne">
-    <h5 class="mb-0">
-      <a data-toggle="collapse" data-parent="#accordion" href="#collapseSubheading" aria-expanded="true" aria-controls="collapseSubheading">
-        <h5>Career and Development</h5>
-      </a>
-    </h5>
-  </div>
-
-  <div id="collapseSubheading" class="collapse show" role="tabpanel" aria-labelledby="subheadingOne">
-
-
-    <div class="card-block">
-              <div class="row marketing">
-
-<div class="col-md-4 hidden-xs-down hidden-sm-down bg-faded">
-  <img src="../assets/images/careerdevelopment.png" width="200px" height="125px" alt="Card image cap">
-</div>
-
-
-                <div class="col-md-4">
-
-                <a class="nav-link" href="#">  <h6>myPM</h6></a>
-
-                <a class="nav-link" href="#">  <h6>Position Postings</h6></a>
-
-                <a class="nav-link" href="#">  <h6>Learning Plan</h6></a>
-
-                </div>
-
-
-                <div class="col-md-4">
-                <a class="nav-link" href="#">  <h6>Learning Request</h6></a>
-
-                <a class="nav-link" href="#">  <h6>Inspire</h6></a>
-
-                <a class="nav-link" href="#">  <h6>My Career</h6></a>
+              <div class="row featurette" style="padding: 5vh;" >
+                <div class="col-md-12">
+                  <h2 class="featurette-heading">Need Help?</h2>
+                  <h6 class="lead"><b>HR Direct: </b><span class="text-muted">317-433-9000 or 877-676-4745</span></h6>
+                  <p class="lead"><b>IT Support: </b><span class="text-muted">317-277-7000, 800-435-7977, or 800-222-4639 (field support)</span></p>
                 </div>
               </div>
-    </div>
-  </div>
+              <hr class="featurette-divider">
+            </div>
+          </div>
 
-
-  <div class="card-header" role="tab" id="headingTwo">
-    <h5 class="mb-0">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Pay and Benefits
-      </a>
-    </h5>
-  </div>
-  <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-
-
-    <div class="card-block">
-      <div class="row">
-      <div class="col-md-4 hidden-xs-down hidden-sm-down">
-        <img src="../assets/images/payandbenefits.png" width="200px" height="125px" alt="Card image cap">
-      </div>
-
-    <div class="col-md-8">  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    </div>
-  </div>
-    </div>
-  </div>
-
-
-  <div class="card-header" role="tab" id="headingThree">
-    <h5 class="mb-0">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Personal Information
-      </a>
-    </h5>
-  </div>
+          <footer class="footer">
+            <p>&copy; Company 2017</p>
+          </footer>
 
 
 
-  <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-    <div class="card-block">
-        <div class="row">
-        <div class="col-md-4 hidden-xs-down hidden-sm-down">
-          <img src="../assets/images/mypersonalinformation.png" width="200px" height="125px" alt="Card image cap">
         </div>
+      </div>
+      <!-- <div class="col-sm-2 col-lg-2 hidden-xs-down hidden-md-down bg-faded sidebar"></div> -->
 
-      <div class="col-md-8">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+
+      <!-- col-md-2 hidden-xs-down hidden-md-down -->
+      <!-- col-sm-2 hidden-xs-down hidden-md-down bg-faded sidebar -->
+
     </div>
   </div>
-</div>
-</div>
-
-<div class="card-block">
-</div>
-  </div>  -->
-  <!-- /Accordian-->
-
-        <footer class="footer">
-          <p>&copy; Company 2017</p>
-        </footer>
-
-
-
-</div>
-</div>
-<!-- <div class="col-sm-2 col-lg-2 hidden-xs-down hidden-md-down bg-faded sidebar"></div> -->
-
-
-
-    <!-- col-md-2 hidden-xs-down hidden-md-down -->
-<!-- col-sm-2 hidden-xs-down hidden-md-down bg-faded sidebar -->
-
-  </div>
-</div>
 
 
   <!-- Bootstrap core JavaScript
